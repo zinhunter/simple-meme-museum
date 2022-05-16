@@ -114,6 +114,10 @@ impl SimpleMemeMuseum {
         self.memes.to_vec()
     }
 
+    pub fn obtener_lista_museos(&self) -> Vec<String> {
+        self.museos.keys_as_vector().to_vec()
+    }
+
     //Regresamos un Vector con los memes que tiene ese museo.
     pub fn obtener_memes_museo(&self, nombre_museo: String) -> Vec<Meme> {
         let museo = self.museos.get(&nombre_museo);
